@@ -142,25 +142,136 @@ const LoginPage = ({onNavigate, onLogin}) => {
     );
 };
 
-const AboutPage = ({onNavigate}) => (
-    <div style={{...styles.container,background:'#29b6f6',color:'#fff'}}>
-        <div style={{textAlign:'center',padding:'30px 20px'}}><Logo onClick={()=>onNavigate('home')} white={true}/></div>
-        <div style={{maxWidth:'600px',margin:'0 auto',padding:'0 20px 40px',textAlign:'center'}}>
-            <p style={{fontSize:'1.1rem',lineHeight:1.7}}><strong>pipeband.fun</strong> — a fast-paced quiz that puts your medley knowledge to the test!</p>
-        </div>
-        <div style={{padding:'40px 20px'}}>
-            <div style={{maxWidth:'600px',margin:'0 auto'}}>
-                <h2 style={{fontSize:'2rem',fontWeight:900,marginBottom:'20px'}}>FAQ</h2>
-                <div style={{textAlign:'left',marginBottom:'20px'}}><h3 style={{fontWeight:700}}>How does it work?</h3><p style={{opacity:0.9}}>10 audio clips, guess the band and year!</p></div>
-                <div style={{textAlign:'left',marginBottom:'20px'}}><h3 style={{fontWeight:700}}>Scoring?</h3><p style={{opacity:0.9}}>3 pts for correct band + 1 pt for correct year + up to 10 speed bonus</p></div>
-            </div>
-        </div>
-        <div style={{...styles.footer,background:'#29b6f6'}}>
-            <span style={{...styles.footerLink,color:'#fff'}} onClick={()=>onNavigate('about')}>About</span>
-            <span style={{...styles.footerLink,color:'#fff'}} onClick={()=>onNavigate('leaderboard')}>Leaderboard</span>
-        </div>
-    </div>
-);
+const AboutPage = ({ onNavigate }) => {
+            const faqItems = [
+                {
+                    question: "How does it work?",
+                    answer: "You'll be given 10 questions per round. Each question features a 20-second audio clip from a well-known pipe band medley. Your job is to identify the correct tune before time runs out! The faster you answer, the higher your score."
+                },              
+                {
+                    question: "What kind of tunes will I hear?",
+                    answer: "The quiz includes tunes from legendary pipe band medleys between the 1980s and 2010s—the golden era of competitive pipe band music. Expect everything from classic jigs and strathspeys to blistering reels and hornpipes."
+                },
+                {
+                    question: "How is my score calculated?",
+                    answer: "Correct answers earn you points. Faster responses get you bonus points. Score over 50% correct, and you'll get a special congratulations message!"
+                },
+                {
+                    question: "Can I play more than once?",
+                    answer: "Absolutely! Play as many times as you like and try to beat your best score."
+                },
+                {
+                    question: "Can I challenge my friends?",
+                    answer: "Yes! Share your score and see if your friends can match your pipe band medley expertise."
+                },
+                {
+                    question: "What happens if I don't know the tune?",
+                    answer: "No worries—just take your best guess! Even if you don't score high, you'll still get to enjoy some of the best medley moments in pipe band history."
+                },
+                {
+                    question: "How do I prove I'm the ultimate pipeband.fun Trivia champion?",
+                    answer: "Score high, play often, and show off your results! If you consistently ace the quiz, you've got bragging rights as a true pipe band medley expert."
+                }
+            ];
+
+            return (
+                <div style={{
+                    ...styles.container,
+                    background: '#29b6f6',
+                    color: '#fff',
+                }}>
+                    <div style={{
+                        textAlign: 'center',
+                        padding: '30px 20px',
+                    }}>
+                        <div style={{ ...styles.logo, color: '#fff' }} onClick={() => onNavigate('home')}>
+                            pipeband<span style={{ ...styles.logoFun, color: '#fff' }}>.fun</span>
+                        </div>
+                    </div>
+                    
+                    <div style={{
+                        maxWidth: '600px',
+                        margin: '0 auto',
+                        padding: '0 20px 40px',
+                        textAlign: 'center',
+                    }}>
+                        <p style={{
+                            fontSize: '1.1rem',
+                            lineHeight: 1.7,
+                            marginBottom: '20px',
+                        }}>
+                            <strong>Introducing pipeband.fun</strong> — a fast-paced quiz that puts your medley knowledge to the test. Spanning iconic sets from the 1980s to the 2010s, this 10-question challenge gives you 20 seconds per clip to guess the tune.
+                        </p>
+                        
+                        <div style={{
+                            margin: '40px 0',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}>
+                            <div style={{
+                                width: '2px',
+                                height: '100px',
+                                background: 'rgba(255,255,255,0.3)',
+                                marginRight: '30px',
+                            }} />
+                        </div>
+                    </div>
+                    
+                    <div style={{
+                        background: '#29b6f6',
+                        padding: '40px 20px 60px',
+                    }}>
+                        <div style={{
+                            maxWidth: '600px',
+                            margin: '0 auto',
+                        }}>
+                            <h2 style={{
+                                fontSize: '2.5rem',
+                                fontWeight: 900,
+                                marginBottom: '30px',
+                            }}>FAQ</h2>
+                            
+                            {faqItems.map((item, index) => (
+                                <div key={index} style={{ marginBottom: '24px', textAlign: 'left' }}>
+                                    <h3 style={{
+                                        fontSize: '1.1rem',
+                                        fontWeight: 700,
+                                        marginBottom: '8px',
+                                    }}>{item.question}</h3>
+                                    <p style={{
+                                        fontSize: '0.95rem',
+                                        lineHeight: 1.6,
+                                        opacity: 0.95,
+                                    }}>{item.answer}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div style={{
+                        background: '#29b6f6',
+                        padding: '40px 20px',
+                        textAlign: 'center',
+                    }}>
+                        <div style={{
+                            fontSize: '2rem',
+                            fontWeight: 800,
+                            fontStyle: 'italic',
+                        }}>.fun</div>
+                    </div>
+                    
+                    <div style={{
+                        ...styles.footer,
+                        background: '#29b6f6',
+                        paddingBottom: '30px',
+                    }}>
+                        <span style={{ ...styles.footerLink, color: '#fff' }} onClick={() => onNavigate('about')}>About</span>
+                        <span style={{ ...styles.footerLink, color: '#fff' }} onClick={() => onNavigate('leaderboard')}>Leaderboard</span>
+                    </div>
+                </div>
+            );
+        };
 
 const ReadyPage = ({onNavigate, username}) => (
     <div style={{...styles.container,justifyContent:'center',alignItems:'center',padding:'20px',position:'relative'}}>
