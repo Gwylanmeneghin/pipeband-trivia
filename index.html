@@ -179,7 +179,7 @@ const HomePage = ({onNavigate}) => (
     <div style={{...styles.container, justifyContent:'flex-start', padding:'0 20px'}}>
         <Header onNavigate={onNavigate}/>
         <div style={{textAlign:'center',maxWidth:'853px', marginTop:'60px',}}>
-            <h1 style={{fontSize:'clamp(2.5rem,8vw,100px)',fontWeight:800,lineHeight:1.1,marginBottom:'24px',color:'#1a2744'}}>Your modern<br/>pipe band trivia.</h1>
+            <h1 style={{fontSize:'clamp(2.5rem,8vw,100px)',fontWeight:800,lineHeight:1.1,marginBottom:'24px',color:'#040321'}}>Your modern<br/>pipe band trivia.</h1>
             <p style={{color:'#666',fontSize:'20px',lineHeight:1.6,}}>A fast-paced quiz that puts your pipe band knowledge to the test.</p>
             <p style={{color:'#666',fontSize:'20px',lineHeight:1.6,marginBottom:'12px'}}>It's time to relive the golden years of pipe band medleys.</p>
             <p style={{color:'#666',fontSize:'20px',marginBottom:'32px'}}>Think you've got what it takes? Let's find out!</p>
@@ -202,7 +202,7 @@ const LoginPage = ({onNavigate, onLogin}) => {
         <div style={{...styles.container, justifyContent:'flex-start', padding:'0 20px'}}>
             <Header onNavigate={onNavigate}/>
             <div style={{textAlign:'center',maxWidth:'400px',width:'100%',marginTop:'80px'}}>
-                <h1 style={{fontSize:'50px',fontWeight:800,marginBottom:'12px',color:'#1a2744'}}>Enter your username</h1>
+                <h1 style={{fontSize:'50px',fontWeight:800,marginBottom:'12px',color:'#040321'}}>Enter your username</h1>
                 <p style={{color:'#666',fontSize:'20px',marginBottom:'32px'}}>Choose a username for the leaderboard</p>
                 <form onSubmit={handleSubmit} style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'16px'}}>
                     <input type="text" placeholder="Your username" value={username} onChange={e=>{setUsername(e.target.value);setError('');}} style={{...styles.input,borderColor:error?'#e74c3c':'#e0e0e0'}} autoFocus/>
@@ -380,7 +380,7 @@ const ReadyPage = ({onNavigate, username}) => (
         <button onClick={()=>onNavigate('home')} style={{position:'absolute',top:'20px',right:'20px',background:'none',border:'none',fontSize:'1.5rem',cursor:'pointer',color:'#29b6f6'}}>×</button>
         <Header onNavigate={onNavigate}/>
         <div style={{textAlign:'center',maxWidth:'550px', marginTop:'80px'}}>
-            <h1 style={{fontSize:'clamp(2rem,6vw,50px)',fontWeight:800,marginBottom:'40px',color:'#1a2744'}}>Ready, {username}?</h1>
+            <h1 style={{fontSize:'clamp(2rem,6vw,50px)',fontWeight:800,marginBottom:'40px',color:'#040321'}}>Ready, {username}?</h1>
             <p style={{color:'#666',fontSize:'20px',lineHeight:1.7,marginBottom:'16px'}}>10 audio clips. Identify the <u>band</u> and <u>year</u> before time runs out!</p>
             <p style={{color:'#666',fontSize:'20px',marginBottom:'40px'}}><strong>Scoring:</strong> 3 pts band + 1 pt year + up to 10 speed bonus</p>
             <button style={styles.btnPrimary} onClick={()=>onNavigate('quiz')} onMouseOver={e=>{e.target.style.transform='scale(1.05)';}} onMouseOut={e=>{e.target.style.transform='scale(1)';}}>Let's go!</button>
@@ -748,7 +748,7 @@ const ResultsPage = ({onNavigate, data}) => {
             <div style={{textAlign:'center', width:'100%', maxWidth:'600px', marginTop:'70px'}}>
                 {/* Results bloc */}
                 <div style={{marginBottom:'30px'}}>
-                    <h1 style={{fontSize:'2.5rem', fontWeight:800, marginBottom:'20px', color:'#1a2744'}}>
+                    <h1 style={{fontSize:'2.5rem', fontWeight:800, marginBottom:'20px', color:'#040321'}}>
                         {pct >= 50 ? 'Congrats' : 'Nice try'}, {user}!
                     </h1>
                     
@@ -874,7 +874,7 @@ const LeaderboardPage = ({onNavigate}) => {
             
             <div style={{maxWidth:'800px', width:'100%', margin:'0 auto', marginTop:'50px'}}>
                 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'30px', flexWrap:'wrap', gap:'20px'}}>
-                    <h1 style={{fontSize:'2.5rem', fontWeight:800, color:'#1a2744'}}>Leaderboard</h1>
+                    <h1 style={{fontSize:'2.5rem', fontWeight:800, color:'#040321'}}>Leaderboard</h1>
                     <button style={styles.btnPrimary} onClick={() => onNavigate('login')} onMouseOver={e=>{e.target.style.transform='scale(1.05)';}} onMouseOut={e=>{e.target.style.transform='scale(1)';}}>Play Now</button>
                 </div>
                 
