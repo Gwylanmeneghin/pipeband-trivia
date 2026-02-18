@@ -180,8 +180,7 @@ const HomePage = ({onNavigate}) => (
         <Header onNavigate={onNavigate}/>
         <div style={{textAlign:'center',maxWidth:'853px', marginTop:'60px',}}>
             <h1 style={{fontSize:'clamp(2.5rem,8vw,100px)',fontWeight:800,lineHeight:1.1,marginBottom:'24px',color:'#040321'}}>Your modern<br/>pipe band trivia.</h1>
-            <p style={{color:'#666',fontSize:'20px',lineHeight:1.6,}}>A fast-paced quiz that puts your pipe band knowledge to the test.</p>
-            <p style={{color:'#666',fontSize:'20px',lineHeight:1.6,marginBottom:'12px'}}>It's time to relive the golden years of pipe band medleys.</p>
+            <p style={{color:'#666',fontSize:'20px',lineHeight:1.6,marginBottom:'12px'}}>A fast-paced quiz that puts your pipe band knowledge to the test. It's time to relive the golden years of pipe band medleys.</p>
             <p style={{color:'#666',fontSize:'20px',marginBottom:'32px'}}>Think you've got what it takes?</p>
             <div style={{display:'flex',gap:'12px',justifyContent:'center',flexWrap:'wrap'}}>
                 <button style={styles.btnPrimary} onClick={()=>onNavigate('login')} onMouseOver={e=>{e.target.style.transform='scale(1.05)';e.target.style.boxShadow='0 4px 15px rgba(41,182,246,0.4)';}} onMouseOut={e=>{e.target.style.transform='scale(1)';e.target.style.boxShadow='none';}}>Let's find out!</button>
