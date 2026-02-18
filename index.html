@@ -381,7 +381,7 @@ const ReadyPage = ({onNavigate, username}) => (
         <div style={{textAlign:'center',maxWidth:'550px', marginTop:'80px'}}>
             <h1 style={{fontSize:'clamp(2rem,6vw,50px)',fontWeight:800,marginBottom:'40px',color:'#040321'}}>Ready, {username}?</h1>
             <p style={{color:'#666',fontSize:'20px',lineHeight:1.7,marginBottom:'16px'}}>10 audio clips. Identify the <u>band</u> and <u>year</u> before time runs out!</p>
-            <p style={{color:'#666',fontSize:'20px',marginBottom:'40px'}}><strong>Scoring:</strong> 3 pts band + 1 pt year + up to 10 speed bonus</p>
+            <p style={{color:'#666',fontSize:'20px',lineHeight:1.7,marginBottom:'40px'}}><strong>Scoring:</strong> 3 pts band + 1 pt year + up to 10 speed bonus</p>
             <button style={styles.btnPrimary} onClick={()=>onNavigate('quiz')} onMouseOver={e=>{e.target.style.transform='scale(1.05)';}} onMouseOut={e=>{e.target.style.transform='scale(1)';}}>Let's go!</button>
         </div>
         <div style={styles.footer}>
